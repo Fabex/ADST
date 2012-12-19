@@ -35,7 +35,7 @@ Cette application vous permez de pouvoir manager vos séries :
 
 - Dans votre virtualhost ajouté :
 
-> 
+
 	NameVirtualHost adst
 
 	&lt;VirtualHost adst:80&gt;
