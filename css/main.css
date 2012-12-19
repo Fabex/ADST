@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+.suggest {
+  width: 250px !important;
+  height: 26px !important;
+}
+
+.nav-button {
+	border-radius: 14px 14px 14px 14px !important;
+    height: 25px !important;
+    margin-top: 0 !important;
+}
