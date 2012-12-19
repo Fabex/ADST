@@ -39,14 +39,14 @@ Cette application vous permez de pouvoir manager vos séries :
 
 	&lt;VirtualHost adst:80&gt;
 
-        	DocumentRoot ~/webroot/adst
-	        ServerName adst
-	
-        	ErrorLog ~/webroot/adst/error.log
-	
-        	# Possible values include: debug, info, notice, warn, error, crit,
-        	# alert, emerg.
-        	LogLevel warn
+	DocumentRoot ~/webroot/adst
+
+	ServerName adst
+
+	ErrorLog ~/webroot/adst/error.log
+
+	LogLevel warn
+
 	&lt;/VirtualHost&gt;
 
 - Dans votre hosts :
