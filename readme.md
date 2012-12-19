@@ -34,7 +34,7 @@ Cette application vous permez de pouvoir manager vos séries :
 ### Création du virtualhost
 
 - Dans votre virtualhost ajouté :
-
+<pre>
 	NameVirtualHost adst
 	<VirtualHost adst:80>
         	DocumentRoot ~/webroot/adst
@@ -46,7 +46,7 @@ Cette application vous permez de pouvoir manager vos séries :
         	# alert, emerg.
         	LogLevel warn
 	</VirtualHost>
-
+</pre>
 - Dans votre hosts :
 
 	127.0.0.1       adst
