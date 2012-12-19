@@ -34,19 +34,21 @@ Cette application vous permez de pouvoir manager vos séries :
 ### Création du virtualhost
 
 - Dans votre virtualhost ajouté :
-<pre>
+
 	NameVirtualHost adst
-	<VirtualHost adst:80>
+
+	&lt;VirtualHost adst:80&gt;
+
         	DocumentRoot ~/webroot/adst
 	        ServerName adst
 	
         	ErrorLog ~/webroot/adst/error.log
-
+	
         	# Possible values include: debug, info, notice, warn, error, crit,
         	# alert, emerg.
         	LogLevel warn
-	</VirtualHost>
-</pre>
+	&lt;/VirtualHost&gt;
+
 - Dans votre hosts :
 
 	127.0.0.1       adst
