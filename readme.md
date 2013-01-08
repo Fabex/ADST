@@ -66,3 +66,19 @@ Cette application vous permez de pouvoir manager vos séries :
 
 	- ln -s /path/to/series/folder Series
  
+
+## En image
+
+![Preview of list](https://raw.github.com/Fabex/ADST/master/adst.png)
+
+1. Dans la colonne Torrent voici le code couleur :
+	- Noir : Vous avez déjà téléchargé le torrent
+	- Vert : Le torrent est disponible
+	- Rouge : Le torrent n'est pas encore disponible
+
+2. Dans la colonne Sous titre :
+	- Si les liens sont des archives le zip est automatiquement dézipé
+	- Le lien "Real Link" vous propose de télécharger le fichier via votre navigateur
+
+3. Dans la colonne Action :
+	- L'icone VLC vous permet de lire directement l'épisode
