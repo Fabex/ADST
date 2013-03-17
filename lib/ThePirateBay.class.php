@@ -7,6 +7,7 @@ class ThePirateBay {
 	}
 
 	public static function getTorrent($serie, $number) {
+		$serie = preg_replace('/\(\d+\)/', '', $serie);
 		return self::getBetterTorrent($serie.' '.$number);
 	}
 	
