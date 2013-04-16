@@ -29,7 +29,7 @@ if (isset($_GET['mode'])) {
 $nbSerie = 0;
 ?>
 
-<!DOCTYPE html">
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Automatic Download Series Torrent</title>
@@ -87,7 +87,7 @@ $nbSerie = 0;
 		<tr>
 			<td class="serie">
 				<a href="listSeason.php?serie=<?php echo urlencode($serieUrl) ?>">
-				<?php echo $serie?>
+				<?php echo $serie; ?>
 				</a>
 			</td>
 			<td><?php echo $season?></td>

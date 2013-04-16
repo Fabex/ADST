@@ -7,7 +7,7 @@ $serie = $betaSerie->memberSeries($yaml['beta_series']['login']);
 
 ?>
 
-<!DOCTYPE html">
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Automatic Download Series Torrent - <?php echo $serieDisplay->show->title; ?></title>
