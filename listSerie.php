@@ -1,8 +1,9 @@
 <?php
+require_once('vendor/autoload.php');
 require_once 'lib/BetaSerie.class.php';
 require_once 'lib/Tools.lib.php';
 
-$serie = $betaSerie->memberSeries('fabex');
+$serie = $betaSerie->memberSeries($yaml['beta_series']['login']);
 
 ?>
 
@@ -28,9 +29,9 @@ $serie = $betaSerie->memberSeries('fabex');
 	    	</div>
 		</div>
 	</div>
-	
+
 	<h1> Liste de mes Séries</h1>
-	
+
 	<div class="content">
 		<div class="span12">
 			<ul>
@@ -44,6 +45,6 @@ $serie = $betaSerie->memberSeries('fabex');
 			</ul>
 		</div>
 	</div>
-	
+
 </body>
 </html>
