@@ -1,5 +1,5 @@
 <?php
-
+require_once('vendor/autoload.php');
 require_once 'lib/BetaSerie.class.php';
 require_once 'lib/Torrent.class.php';
 require_once 'lib/Tools.lib.php';
@@ -172,7 +172,7 @@ function dlSubtitle(link, serie, season, episode) {
 			'episode' : episode
 		},
 		success: function(data){
-			
+
 	  	}
 	});
 	return true;
@@ -188,7 +188,7 @@ function upAsDownloaded(serie, season, episode) {
 			'episode' : episode
 		},
 		success: function(data){
-			
+
 	  	}
 	});
 	return true;
