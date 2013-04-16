@@ -2,3 +2,7 @@
 
 Series
 error.log
+parameters.yml
+
+.idea/
+/vendor/

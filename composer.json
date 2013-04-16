@@ -1,0 +1,15 @@
+{
+    "name": "adst/adst",
+    "require": {
+        "symfony/yaml": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "fabex"
+        },
+        {
+            "name": "lesmyrmidons"
+        }
+    ],
+    "minimum-stability": "dev"
+}
