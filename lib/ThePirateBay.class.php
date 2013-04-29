@@ -17,7 +17,7 @@ class ThePirateBay {
 	
 	static private function getBetterTorrent($data) {
 		$data = urlencode($data);
-		$url = 'http://thepiratebay.se/search/'.$data.'/0/7/0';
+		$url = 'http://thepiratebay.is/search/'.$data.'/0/7/0';
 		$html = self::my_file_get_contents($url);
 		$pattern = "/href=\"(magnet\:.*)\" title/U";
 		$matches = array();
