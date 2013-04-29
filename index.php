@@ -1,5 +1,5 @@
 <?php
-
+require_once('vendor/autoload.php');
 require_once 'lib/BetaSerie.class.php';
 require_once 'lib/Torrent.class.php';
 require_once 'lib/Tools.lib.php';
@@ -29,7 +29,7 @@ if (isset($_GET['mode'])) {
 $nbSerie = 0;
 ?>
 
-<!DOCTYPE html">
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Automatic Download Series Torrent</title>
@@ -87,7 +87,7 @@ $nbSerie = 0;
 		<tr>
 			<td class="serie">
 				<a href="listSeason.php?serie=<?php echo urlencode($serieUrl) ?>">
-				<?php echo $serie?>
+				<?php echo $serie; ?>
 				</a>
 			</td>
 			<td><?php echo $season?></td>
@@ -172,7 +172,7 @@ function dlSubtitle(link, serie, season, episode) {
 			'episode' : episode
 		},
 		success: function(data){
-			
+
 	  	}
 	});
 	return true;
@@ -188,7 +188,7 @@ function upAsDownloaded(serie, season, episode) {
 			'episode' : episode
 		},
 		success: function(data){
-			
+
 	  	}
 	});
 	return true;

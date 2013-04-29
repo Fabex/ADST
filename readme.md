@@ -30,6 +30,9 @@ Cette application vous permez de pouvoir manager vos séries :
 - cd ~/webroot
 - mkdir adst
 - git clone git@github.com:Fabex/ADST.git adst
+- Si vous ne possédez pas composer.phar, installez le :
+    - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin
+- composer.phar install
 
 ### Création du virtualhost
 
@@ -65,7 +68,7 @@ Cette application vous permez de pouvoir manager vos séries :
 	- cd ~/webroot/adst
 
 	- ln -s /path/to/series/folder Series
- 
+
 
 ## En image
 

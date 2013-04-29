@@ -1,5 +1,7 @@
 <?php
 
+use Symfony\Component\Yaml\Yaml;
+
 function debug () {
 	echo '<pre>';
 	$numargs = func_num_args();
@@ -10,6 +12,7 @@ function debug () {
 	echo '</pre>';
 }
 
+$yaml = Yaml::parse(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'parameters.yml');
 
 $betaSerie = new BetaSerie();
-$betaSerie->memberAuthentication('login', 'mot_de_passe');
+$betaSerie->memberAuthentication($yaml['beta_series']['login'], $yaml['beta_series']['password']);
