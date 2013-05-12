@@ -56,9 +56,9 @@ Cette application vous permez de pouvoir manager vos séries :
 
 ## Configuration
 
-1. Modifier le fichier lib/Tool.lib.php
+1. Renommer le fichier config.php.dist en config.php
 
-	à la ligne 15 remplacé par vos login et mot de passe de betaseries
+	remplacer les constantes par vos login et mot de passe de betaseries
 
 2. Crée un lien symbolique "Series" vers votre dossier de ou vous stockez vos séries
 

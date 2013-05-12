@@ -1,8 +1,11 @@
 <?php
 require_once 'lib/BetaSerie.class.php';
-require_once 'lib/Tools.lib.php';
+require_once 'config.php';
 
-$serie = $betaSerie->memberSeries('fabex');
+$betaSerie = new BetaSerie();
+$betaSerie->memberAuthentication(LOGIN, MDP);
+
+$serie = $betaSerie->memberSeries(LOGIN);
 
 ?>
 

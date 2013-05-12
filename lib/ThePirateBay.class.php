@@ -7,7 +7,7 @@ class ThePirateBay {
 	}
 
 	public static function getTorrent($serie, $number) {
-		$serie = preg_replace('/\(\d+\)/', '', $serie);
+		$serie = preg_replace('/\(\d+\)/', '', $serie); //--> hack to remove year in ()
 		return self::getBetterTorrent($serie.' '.$number);
 	}
 	

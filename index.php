@@ -2,7 +2,10 @@
 
 require_once 'lib/BetaSerie.class.php';
 require_once 'lib/Torrent.class.php';
-require_once 'lib/Tools.lib.php';
+require_once 'config.php';
+
+$betaSerie = new BetaSerie();
+$betaSerie->memberAuthentication(LOGIN, MDP);
 
 if (isset($_GET['action'])) {
 	switch ($_GET['action']) {
@@ -122,6 +125,7 @@ $nbSerie = 0;
 				<?php endif;?>
 			</td>
 			<td>
+				<div>BetaSerie</div>
 				<ul>
 					<?php if (property_exists($episode, 'subs')):?>
 						<?php foreach ($episode->subs as $sub) : ?>
@@ -134,6 +138,26 @@ $nbSerie = 0;
 						<?php endforeach;?>
 					<?php endif;?>
 				</ul>
+				<div>Addic7ed</div>
+				<ul id="srtAddic7ed_<?php echo $serieUrl.'_'.$season.'_'.$episodeNumber?>">
+				</ul>
+					<script>
+					$.ajax({
+						url: "getAddic7edSrt.php",
+						type: "POST",
+						data : {
+							serie : '<?php echo $serie?>',
+							season :  '<?php echo $season?>',
+							number :  '<?php echo $episodeNumber?>'
+						},
+						success: function(data){
+							if (data != '') {
+								$('#srtAddic7ed_<?php echo $serieUrl.'_'.$season.'_'.$episodeNumber?>').append(
+										'<li><a href="'+data+'">' + data + '</a></li>');
+							}
+					  	}
+					});
+				</script>
 			</td>
 			<td class="<?php echo $isDownloaded ? 'action' : '' ?>">
 				<a id="<?php echo $serie.'$$'.$season.'$$'.$number?>" href="<?php echo $watchedUrl?>">Watched</a>

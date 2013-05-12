@@ -98,7 +98,7 @@ class BetaSerie {
 		if (!empty($this->memberToken)) {
 			$parameters['token'] = $this->memberToken;
 		}
-		$url = self::api.$action.'.json?'.time;
+		$url = self::api.$action.'.json?'.time();
 		return json_decode($curl->get($url, $parameters));
 	}
 

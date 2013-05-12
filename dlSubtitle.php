@@ -5,22 +5,28 @@ $season = $_POST['season'];
 $episode = $_POST['episode'];
 $file = $_POST['link'];
 
-$newfile = 'tmp/tmp_file.zip';
+$newfile = 'tmp/tmp_file';
 
 if (!copy($file, $newfile)) {
 	echo "failed to copy $file...\n";
 }
 
-$zip = zip_open($newfile);
+$finfo = finfo_open(FILEINFO_MIME_TYPE);
+$myme = finfo_file($finfo, $newfile);
 
-$content = '';
-while($ze = zip_read($zip)) {
-	var_dump(zip_entry_name($ze));
-	while($t = zip_entry_read($ze)) {
-		$content .= $t;
+if (strpos($myme, 'text') !== false) {
+	$content = file_get_contents($newfile);
+} else {
+	$zip = zip_open($newfile);
+	$content = '';
+	while($ze = zip_read($zip)) {
+		while($t = zip_entry_read($ze)) {
+			$content .= $t;
+		}
+		break;
 	}
-	break;
 }
+
 
 $dir = 'Series/'.$serie.'/'.$serie.' S0'.$season;
 if ($d = opendir($dir)) {
